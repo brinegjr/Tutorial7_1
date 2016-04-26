@@ -1,0 +1,2 @@
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7\Tutorial7\bin\Debug\Tutorial7.exe.config
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\Tutorial7\bin\Debug\Tutorial7.exe.config
