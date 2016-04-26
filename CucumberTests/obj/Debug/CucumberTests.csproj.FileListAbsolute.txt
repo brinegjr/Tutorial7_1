@@ -1,0 +1,11 @@
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\CucumberTests.dll.config
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\CucumberTests.dll
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\CucumberTests.pdb
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\Tutorial7.exe
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\Tutorial7.pdb
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\obj\Debug\CucumberTests.csprojResolveAssemblyReference.cache
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\obj\Debug\CucumberTests.dll
+C:\Users\brinegjr\Documents\CSSE 376\Tutorial7_1\CucumberTests\obj\Debug\CucumberTests.pdb
