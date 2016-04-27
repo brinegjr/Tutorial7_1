@@ -14,5 +14,9 @@ namespace Tutorial7
 
         }
 
+        public bool isCaptured()
+        {
+            return true;
+        }
     }
 }

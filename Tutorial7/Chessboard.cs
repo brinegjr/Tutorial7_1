@@ -22,8 +22,22 @@ namespace Tutorial7
         public void movePiece(Tuple<char, int> tuple1, Tuple<char, int> tuple2)
         {
             Pawn p = dict[tuple1];
-            dict.Remove(tuple1);
-            dict.Add(tuple2, p);
+            bool otherP = dict.ContainsKey(tuple2);
+            if (dict.Remove(tuple1))
+            {
+                if (otherP)
+                {
+                    if (dict.Remove(tuple2))
+                    {
+                        dict.Add(tuple2, p);
+                    }
+                } else
+                {
+                    dict.Add(tuple2, p);
+                }
+            }
+            
+            
         }
 
         public Tuple<char, int> getLocation(Pawn p)

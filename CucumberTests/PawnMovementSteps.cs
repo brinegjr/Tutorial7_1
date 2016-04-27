@@ -15,7 +15,7 @@ namespace CucumberTests
             board = new Chessboard();
         }
 
-        Pawn p = null;
+        public Pawn p = null;
         [Given(@"I have a white pawn at (.)(.)")]
         public void GivenIHaveAWhitePawnAtA(char x, int y)
         {

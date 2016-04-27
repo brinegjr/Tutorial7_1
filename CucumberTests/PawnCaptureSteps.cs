@@ -21,7 +21,13 @@ namespace CucumberTests
             blackPawn = new Pawn("black");
             moveSteps.board.placePiece(blackPawn, new Tuple<char, int>(x, y));
         }
-        
+
+        [Then(@"the white pawn is placed in (.)(.)")]
+        public void ThenTheWhitePawnIsPlacedInE(char x, int y)
+        {
+            Assert.AreEqual(new Tuple<char, int>(x, y), moveSteps.board.getLocation(moveSteps.p));
+        }
+
         [Then(@"the black pawn is captured")]
         public void ThenTheBlackPawnIsCaptured()
         {
