@@ -27,18 +27,26 @@ namespace Tutorial7
             {
                 if (otherP)
                 {
-                    if (tuple1.Item1 == tuple2.Item1)
+                    if (tuple1.Item1 == tuple2.Item1 && dict.ContainsKey(tuple2))
                     {
                         dict.Add(tuple1, p);
                         return;
-                    }
-                    else if (dict.Remove(tuple2))
+                    } else
                     {
+                        dict.Remove(tuple2);
                         dict.Add(tuple2, p);
                     }
                 } else
                 {
-                    dict.Add(tuple2, p);
+                    if (tuple1.Item2 == 2 && tuple2.Item2 == 4 && tuple1.Item1 == tuple2.Item1
+                        && dict.ContainsKey(new Tuple<char, int>(tuple1.Item1, 3)))
+                    {
+                        dict.Add(tuple1, p);
+                        return;
+                    } else
+                    {
+                        dict.Add(tuple2, p);
+                    }
                 }
             }
             
