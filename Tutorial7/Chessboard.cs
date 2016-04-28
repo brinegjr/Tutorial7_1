@@ -27,7 +27,12 @@ namespace Tutorial7
             {
                 if (otherP)
                 {
-                    if (dict.Remove(tuple2))
+                    if (tuple1.Item1 == tuple2.Item1)
+                    {
+                        dict.Add(tuple1, p);
+                        return;
+                    }
+                    else if (dict.Remove(tuple2))
                     {
                         dict.Add(tuple2, p);
                     }
