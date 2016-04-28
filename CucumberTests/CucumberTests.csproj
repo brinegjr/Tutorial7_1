@@ -72,6 +72,12 @@
       <DependentUpon>PawnMovement.feature</DependentUpon>
     </Compile>
     <Compile Include="PawnMovementSteps.cs" />
+    <Compile Include="Pawns2MoveCannotPassThroughPieces.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pawns2MoveCannotPassThroughPieces.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PawnsInitial2MoveCannotPassThroughOtherPiecesSteps.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +101,10 @@
     <None Include="PawnMovement.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PawnMovement.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Pawns2MoveCannotPassThroughPieces.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Pawns2MoveCannotPassThroughPieces.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Choose>
