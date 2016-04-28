@@ -8,10 +8,12 @@ namespace Tutorial7
 {
     public class Pawn
     {
+        public string type = null;
+        public bool hasMoved = false;
 
         public Pawn(string side)
         {
-
+            type = side;
         }
 
         public bool isCaptured()
