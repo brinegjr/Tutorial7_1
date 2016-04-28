@@ -86,10 +86,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.And("I have a black pawn at f6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
- testRunner.When("I try to move the white pawn from c4 to d5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I try to move the black pawn from f6 to e4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.And("I try to move the black pawn from f6 to e4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
  testRunner.And("the white pawn is not captured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

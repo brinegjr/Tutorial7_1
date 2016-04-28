@@ -10,6 +10,7 @@ namespace Tutorial7
     {
         public string type = null;
         public bool hasMoved = false;
+        public bool captured = false;
 
         public Pawn(string side)
         {
@@ -18,7 +19,7 @@ namespace Tutorial7
 
         public bool isCaptured()
         {
-            return true;
+            return this.captured;
         }
     }
 }

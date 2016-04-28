@@ -44,8 +44,24 @@ namespace Tutorial7
                         return;
                     } else
                     {
-                        dict.Remove(tuple2);
-                        dict.Add(tuple2, p);
+                        Pawn p2 = dict[tuple2];
+                        if (p.type == "black" && Math.Abs(((int)tuple1.Item1) - ((int)tuple2.Item1.GetTypeCode())) == 1
+                            && tuple1.Item2 - tuple2.Item2 == 1 && p2.type == "white")
+                        {
+                            p2.captured = true;
+                            dict.Remove(tuple2);
+                            dict.Add(tuple2, p);
+                        } else if (p.type == "white" && Math.Abs(((int)tuple1.Item1) - ((int)tuple2.Item1)) == 1
+                            && tuple2.Item2 - tuple1.Item2 == 1 && p2.type == "black")
+                        {
+                            p2.captured = true;
+                            dict.Remove(tuple2);
+                            dict.Add(tuple2, p);
+                        } else
+                        {
+                            dict.Add(tuple1, p);
+                        }
+                        
                     }
                 } else
                 {
