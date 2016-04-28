@@ -8,7 +8,7 @@ namespace Tutorial7
 {
     public class Chessboard
     {
-        Dictionary<Tuple<char, int>, Pawn> dict;
+        public Dictionary<Tuple<char, int>, Pawn> dict;
         public Chessboard()
         {
             dict = new Dictionary<Tuple<char, int>, Pawn>();
@@ -22,6 +22,7 @@ namespace Tutorial7
         public void movePiece(Tuple<char, int> tuple1, Tuple<char, int> tuple2)
         {
             Pawn p = dict[tuple1];
+            Pawn p2;
             bool otherP = dict.ContainsKey(tuple2);
 
             if (Math.Abs(tuple1.Item2 - tuple2.Item2) > 2)
@@ -44,7 +45,7 @@ namespace Tutorial7
                         return;
                     } else
                     {
-                        Pawn p2 = dict[tuple2];
+                        p2 = dict[tuple2];
                         if (p.type == "black" && Math.Abs(((int)tuple1.Item1) - ((int)tuple2.Item1.GetTypeCode())) == 1
                             && tuple1.Item2 - tuple2.Item2 == 1 && p2.type == "white")
                         {
@@ -57,16 +58,66 @@ namespace Tutorial7
                             p2.captured = true;
                             dict.Remove(tuple2);
                             dict.Add(tuple2, p);
-                        } else
+                        }
+                        else
                         {
                             dict.Add(tuple1, p);
                         }
                         
                     }
+                }
+                else if (dict.ContainsKey(new Tuple<char, int>(tuple2.Item1, tuple2.Item2 + 1)))
+                {
+                    p2 = dict[new Tuple<char, int>(tuple2.Item1, tuple2.Item2 + 1)];
+                    if (p.type == "black" && Math.Abs(((int)tuple1.Item1) - ((int)tuple2.Item1.GetTypeCode())) == 1
+                          && tuple1.Item2 - tuple2.Item2 == 1 && p2.type == "white" && p2.hasMoved)
+                    {
+                        p2.captured = true;
+                        dict.Remove(new Tuple<char, int>(tuple2.Item1, tuple2.Item2 + 1));
+                        dict.Add(tuple2, p);
+                    } else
+                    {
+                        if (((tuple1.Item2 == 2 && tuple2.Item2 == 4 && p.type == "white")
+                        || (tuple1.Item2 == 7 && tuple2.Item2 == 5 && p.type == "black"))
+                        && tuple1.Item1 == tuple2.Item1
+                        && dict.ContainsKey(new Tuple<char, int>(tuple1.Item1, 3)))
+                        {
+                            dict.Add(tuple1, p);
+                            return;
+                        }
+                        else
+                        {
+                            dict.Add(tuple2, p);
+                        }
+                    }
+                } else if (dict.ContainsKey(new Tuple<char, int>(tuple2.Item1, tuple2.Item2 - 1)))
+                {
+                    p2 = dict[new Tuple<char, int>(tuple2.Item1, tuple2.Item2 - 1)];
+                    if (p.type == "white" && Math.Abs(((int)tuple1.Item1) - ((int)tuple2.Item1.GetTypeCode())) == 1
+                        && tuple2.Item2 - tuple1.Item2 == 1 && p2.type == "black" && p2.hasMoved)
+                    {
+                        p2.captured = true;
+                        dict.Remove(new Tuple<char, int>(tuple2.Item1, tuple2.Item2 - 1));
+                        dict.Add(tuple2, p);
+                    } else
+                    {
+                        if (((tuple1.Item2 == 2 && tuple2.Item2 == 4 && p.type == "white")
+                        || (tuple1.Item2 == 7 && tuple2.Item2 == 5 && p.type == "black"))
+                        && tuple1.Item1 == tuple2.Item1
+                        && dict.ContainsKey(new Tuple<char, int>(tuple1.Item1, 3)))
+                        {
+                            dict.Add(tuple1, p);
+                            return;
+                        }
+                        else
+                        {
+                            dict.Add(tuple2, p);
+                        }
+                    }
                 } else
                 {
                     if (((tuple1.Item2 == 2 && tuple2.Item2 == 4 && p.type == "white")
-                        || (tuple1.Item2 == 6 && tuple2.Item2 == 4 && p.type == "black"))
+                        || (tuple1.Item2 == 7 && tuple2.Item2 == 5 && p.type == "black"))
                         && tuple1.Item1 == tuple2.Item1
                         && dict.ContainsKey(new Tuple<char, int>(tuple1.Item1, 3)))
                     {
