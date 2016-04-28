@@ -54,6 +54,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CannotMoveThroghOtherPieces.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CannotMoveThroghOtherPieces.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CannotMoveThroghOtherPiecesSteps.cs" />
     <Compile Include="PawnCapture.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CannotMoveThroghOtherPieces.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CannotMoveThroghOtherPieces.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="PawnCapture.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
