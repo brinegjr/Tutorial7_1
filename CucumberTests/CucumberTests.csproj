@@ -60,6 +60,12 @@
       <DependentUpon>CannotMoveThroghOtherPieces.feature</DependentUpon>
     </Compile>
     <Compile Include="CannotMoveThroghOtherPiecesSteps.cs" />
+    <Compile Include="OnlyMoveOneSpaceAfterFirstMove.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlyMoveOneSpaceAfterFirstMove.feature</DependentUpon>
+    </Compile>
+    <Compile Include="OnlyMoveOneSpaceAfterFirstMoveSteps.cs" />
     <Compile Include="PawnCapture.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +98,10 @@
     <None Include="CannotMoveThroghOtherPieces.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CannotMoveThroghOtherPieces.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OnlyMoveOneSpaceAfterFirstMove.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OnlyMoveOneSpaceAfterFirstMove.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="PawnCapture.feature">

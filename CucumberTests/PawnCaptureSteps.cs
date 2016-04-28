@@ -14,7 +14,7 @@ namespace CucumberTests
             moveSteps = p;
         }
 
-        Pawn blackPawn = null;
+        public Pawn blackPawn = null;
         [Given(@"I have a black pawn at (.)(.)")]
         public void GivenIHaveABlackPawnAtE(char x, int y)
         {
